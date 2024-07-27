@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { FaStar, FaSearch, FaCalendar } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import { BiSolidCategory } from "react-icons/bi";
+import { AiFillCloseCircle } from "react-icons/ai";
 import AddHabit from "./AddHabit";
+
+
 
 
 const Menu = () => {
@@ -14,6 +17,13 @@ const Menu = () => {
     setPopUpVisible(!popUpVisible);
   }
 
+  const ClosePopup = (e) => {
+    setPopUpVisible(!popUpVisible);
+  }
+
+
+
+  
   return (
     <div className="fixed top-4 left-4 rounded-md h-screen w-1/5 bg-primary text-white font-sans p-5">
       <form>
@@ -36,6 +46,12 @@ const Menu = () => {
       {popUpVisible && (
         <div className="relative">
           <div className="absolute bg-white p-3 rounded-md">
+            <div className="">
+              <div className="flex items-end justify-end">
+                  <button onClick={ClosePopup}
+                  className=''><AiFillCloseCircle className="text-red transform duration-300 hover:text-darkred" /></button>
+              </div>
+            </div>
             <AddHabit />
           </div>
         </div>

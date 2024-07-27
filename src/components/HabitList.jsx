@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AddHabit from './AddHabit';
 
 const HabitList = () => {
+
+  const [habit, setHabit] = useState([]);
+
+
   return (
-    <div>HabitList</div>
+    <div className='text-white'>HabitList</div>
   )
 }
 

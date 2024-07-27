@@ -1,4 +1,6 @@
 import React from 'react';
+import HabitList from '../components/HabitList';
+
 
 const Home = () => {
   return (
@@ -7,6 +9,9 @@ const Home = () => {
         <div>
           <h1 className='text-white mt-4 text-lg'>Home</h1>
           <h1 className='text-white text-4xl font-bold'>Meus Hábitos</h1>
+        </div>
+        <div className="">
+          <HabitList />
         </div>
       </div>
     </div>
