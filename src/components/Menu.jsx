@@ -1,62 +1,24 @@
-import React, { useState } from "react";
-import { FaStar, FaSearch, FaCalendar } from "react-icons/fa";
+import React from "react";
+
 import { IoHome } from "react-icons/io5";
 import { BiSolidCategory } from "react-icons/bi";
-import { AiFillCloseCircle } from "react-icons/ai";
-import AddHabit from "./AddHabit";
-
-
-
+import { FaSearch, FaCalendar } from "react-icons/fa";
 
 const Menu = () => {
 
-  const [popUpVisible, setPopUpVisible] = useState(false);
 
-  const togglePopup = (e) => {
-    e.preventDefault();
-    setPopUpVisible(!popUpVisible);
-  }
-
-  const ClosePopup = (e) => {
-    setPopUpVisible(!popUpVisible);
-  }
-
-
-
-  
   return (
     <div className="fixed top-4 left-4 rounded-md h-screen w-1/5 bg-primary text-white font-sans p-5">
       <form>
         <div className="relative">
           <FaSearch className="text-secondary absolute left-3 top-2/3 transform -translate-y-1/2" />
           <input
-            className="mt-5 w-full text-primary rounded-md p-2 pl-10  bg-tertiary placeholder:text-sm"
+            className="mt-5 w-full text-primary rounded-md p-2 pl-10 bg-tertiary placeholder:text-sm"
             type="text"
             placeholder="Procure hábitos"
           />
         </div>
-        <button
-          onClick={togglePopup}
-          className="flex bg-green items-center justify-center mt-2 w-full rounded-md p-1 transition duration-300 hover:bg-darkgreen"
-          type="submit"
-        >
-          <FaStar className="mr-2" /> Criar Hábito
-        </button>
       </form>
-      {popUpVisible && (
-        <div className="relative">
-          <div className="absolute bg-white p-3 rounded-md">
-            <div className="">
-              <div className="flex items-end justify-end">
-                  <button onClick={ClosePopup}
-                  className=''><AiFillCloseCircle className="text-red transform duration-300 hover:text-darkred" /></button>
-              </div>
-            </div>
-            <AddHabit />
-          </div>
-        </div>
-      )}
-
 
       <div className="mt-5">
         <div className="flex items-center">
@@ -78,10 +40,11 @@ const Menu = () => {
           </a>
         </div>
       </div>
+
+      <div className="mt-5">
+      </div>
     </div>
   );
 };
-
-
 
 export default Menu;
