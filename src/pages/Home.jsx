@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import HabitList from '../components/HabitList';
-import AddHabit from '../components/AddHabit';
+import React, { useState } from "react";
+import HabitList from "../components/HabitList";
+import AddHabit from "../components/AddHabit";
 import { FaStar } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
 
@@ -25,8 +25,8 @@ const Home = () => {
     <div className="bg-secondary flex w-full h-screen">
       <div className="flex-grow rounded-md bg-primary mt-0 p-6 m-4">
         <div>
-          <h1 className='text-white mt-4 text-lg'>Home</h1>
-          <h1 className='text-white text-4xl font-bold'>Meus Hábitos</h1>
+          <h1 className="text-white mt-4 text-lg">Home</h1>
+          <h1 className="text-white text-4xl font-bold">Meus Hábitos</h1>
         </div>
         <div className="my-4">
           <button
@@ -44,14 +44,15 @@ const Home = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-md">
             <div className="grid justify-items-stretch">
-            <button
-            onClick={closePopup} 
-            className="justify-self-end mb-0 -mr-1 text-red transform duration-200 hover:text-darkred">
-              <AiFillCloseCircle />
-            </button>
+              <button
+                onClick={closePopup}
+                className="justify-self-end mb-0 -mr-1 text-red transform duration-200 hover:text-darkred"
+              >
+                <AiFillCloseCircle />
+              </button>
             </div>
             <AddHabit onAddHabit={addHabit} />
-          </div> 
+          </div>
         </div>
       )}
     </div>

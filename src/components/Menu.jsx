@@ -5,8 +5,6 @@ import { BiSolidCategory } from "react-icons/bi";
 import { FaSearch, FaCalendar } from "react-icons/fa";
 
 const Menu = () => {
-
-
   return (
     <div className="fixed top-4 left-4 rounded-md h-screen w-1/5 bg-primary text-white font-sans p-5">
       <form>
@@ -41,8 +39,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <div className="mt-5">
-      </div>
+      <div className="mt-5"></div>
     </div>
   );
 };
